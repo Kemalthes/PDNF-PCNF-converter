@@ -69,8 +69,8 @@ def main():
         lambda falses: '({}{} v {}{} v {}{})'.format('!' * falses['x1'], 'x1', '!' * falses['x2'], 'x2', '!' * falses['x3'], 'x3'),
         axis=1).str.cat(sep=' * '))
     pcnf4 = (false4.apply(
-        lambda falses: '({}{} * {}{} * {}{} * {}{})'.format('!' * falses['x1'], 'x1', '!' * falses['x2'], 'x2', '!' * falses['x3'], 'x3', '!' * falses['x4'], 'x4'),
-        axis=1).str.cat(sep=' v '))
+        lambda falses: '({}{} v {}{} v {}{} v {}{})'.format('!' * falses['x1'], 'x1', '!' * falses['x2'], 'x2', '!' * falses['x3'], 'x3', '!' * falses['x4'], 'x4'),
+        axis=1).str.cat(sep=' * '))
 
     if varls == 3:
         print("PDNF / СДНФ:\n", pdnf3)
